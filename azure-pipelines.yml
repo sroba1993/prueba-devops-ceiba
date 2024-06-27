@@ -10,6 +10,7 @@ pool: pc-local
 
 steps:
 - task: Gradle@2
+  displayName: 'Build project'
   inputs:
     workingDirectory: ''
     gradleWrapperFile: 'gradlew'
@@ -22,6 +23,7 @@ steps:
     tasks: 'build'
 
 - task: Gradle@2
+  displayName: 'Run tests and aggregate results'
   inputs:
     workingDirectory: ''
     gradleWrapperFile: 'gradlew'
